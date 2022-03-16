@@ -23,4 +23,6 @@ document.querySelector('.form').addEventListener('submit', function(event) {
     tr.appendChild(tdVolume);
     tbody.appendChild(tr);
 
+    let form = document.querySelector('.form');
+    form.reset();
 })
