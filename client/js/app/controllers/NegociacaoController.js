@@ -46,24 +46,6 @@ class NegociacaoController {
             this._mensagem.texto = 'Negociações importadas com sucesso.'
         })
         .catch(error => this._mensagem.texto = error);
-
-        // service.obterNegociacaoDaSemana()
-        //     .then(negociacoes => {negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
-        //     this._mensagem.texto = 'Negociações da semana obtida com sucesso.'
-        // })
-        //     .catch(error => this._mensagem.texto = error)
-
-        // service.obterNegociacaoDaSemanaAnterior()
-        //     .then(negociacoes => {negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
-        //     this._mensagem.texto = 'Negociações da semana obtida com sucesso.'
-        // })
-        //     .catch(error => this._mensagem.texto = error)
-
-        // service.obterNegociacaoDaSemanaRetrasada()
-        //     .then(negociacoes => {negociacoes.forEach(negociacao => this._listaNegociacoes.adiciona(negociacao));
-        //     this._mensagem.texto = 'Negociações da semana obtida com sucesso.'
-        // })
-        //     .catch(error => this._mensagem.texto = error)
        
     }
 
