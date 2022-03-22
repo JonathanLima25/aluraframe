@@ -41,10 +41,11 @@ class NegociacaoController {
             if(xhr.readyState == 4) {
                 if(xhr.status == 200) {
                     console.log("Obtendo as negociações do servidor");
-                    console.log(JSON.parse(xhr.responseText));
+                    JSON.parse(xhr.responseText).map(object => new Negociacao(new Date(object.data), object.quantidade, object.valor)).forEach(negociacao => this._listaNegociacoes.adiciona(negociacao))
+                    this._mensagem.texto = "Lista de negociações da semana importada com sucesso"
                 } else {
-                    console.log("Não foi possível obter as negociações");
                     console.log(xhr.responseText);
+                    this._mensagem.texto = 'Não foi possível obter a lista de negociação'
                 }
 
             }
